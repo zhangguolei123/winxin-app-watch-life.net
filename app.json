@@ -11,10 +11,11 @@
         "pages/hot/hot",
         "pages/pay/pay",
         "pages/webpage/webpage",
-        "pages/comments/comments"
+        "pages/comments/comments",
+        "pages/poster/poster"
     ],
     "window": {
-        "backgroundTextStyle": "light",
+        "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#118fff",
         "navigationBarTitleText": "守望轩",
         "navigationBarTextStyle": "white"
@@ -32,10 +33,10 @@
                 "text": "首页"
             },
             {
-                "pagePath": "pages/comments/comments",
-                "iconPath": "images/tar-comments.png",
-                "selectedIconPath": "images/tar-comments-on.png",
-                "text": "评论"
+                "pagePath": "pages/topic/topic",
+                "iconPath": "images/tar-topic.png",
+                "selectedIconPath": "images/tar-topic-on.png",
+                "text": "专题"
             },
             {
                 "pagePath": "pages/readlog/readlog",

@@ -15,6 +15,7 @@ import config from 'config.js'
 var domain = config.getDomain;
 var pageCount = config.getPageCount;
 var categoriesID = config.getCategoriesID;
+var indexListType = config.getIndexListType;
 var HOST_URI = 'https://' + domain+'/wp-json/wp/v2/';
 var HOST_URI_WATCH_LIFE_JSON = 'https://' + domain + '/wp-json/watch-life-net/v1/';
    
@@ -28,14 +29,19 @@ module.exports = {
     }
     else if (obj.search != '') {
       url += '&search=' + encodeURIComponent(obj.search);
+    }
+    else{
+        if (indexListType !='all')
+        {
+            url += '&categories=' + indexListType;
+        }
     }     
     return url;
 
   },
-
   // 获取多个分类文章列表数据
   getPostsByCategories: function (categories) {
-      var url = HOST_URI + 'posts?per_page=20&orderby=date&order=desc&page=1&categories='+ categories;
+      var url = HOST_URI + 'posts?per_page=20&orderby=date&order=desc&page=1&categories=' + categories;
       return url;
   },
 // 获取置顶的文章
@@ -53,6 +59,12 @@ module.exports = {
       return url;
   },
 
+  //获取是否开启评论的设置
+  getEnableComment: function () {
+      var url = HOST_URI_WATCH_LIFE_JSON;
+      url += 'options/enableComment';
+      return url;
+  },
 
   // 获取tag相关的文章列表
   getPostsByTags: function (id,tags) {
@@ -118,6 +130,12 @@ module.exports = {
     return url;
   },
 
+  //获取文章评论及其回复
+  getCommentsReplay: function (obj) {
+      var url = HOST_URI_WATCH_LIFE_JSON;
+      url += 'comment/getcomments?postid=' + obj.postId + '&limit=' + obj.limit + '&page=' + obj.page + '&order=desc';
+      return url;
+  },
   //获取网站的最新20条评论
   getNewComments: function () {
       return HOST_URI + 'comments?parent=0&per_page=20&orderby=date&order=desc';
@@ -250,9 +268,8 @@ module.exports = {
       var url = HOST_URI_WATCH_LIFE_JSON;
       url += "weixin/sendmessage";
       return url;
-  } ,
-
- //获取订阅的分类
+  },
+  //获取订阅的分类
   getSubscription() {
       var url = HOST_URI_WATCH_LIFE_JSON;
       url += "category/getsubscription";
@@ -271,7 +288,22 @@ module.exports = {
       var url = HOST_URI_WATCH_LIFE_JSON;
       url += "category/delSubscription";
       return url;
+  },
+
+  //生成海报
+  creatPoster() {
+      var url = HOST_URI_WATCH_LIFE_JSON;
+      url += "weixin/qrcodeimg";
+      return url;
+  },
+  //获取海报
+  getPosterUrl() {
+      var url = 'https://' + domain + "/wp-content/plugins/wp-rest-api-for-app/poster/";
+      return url;
+  },
+  //获取二维码
+  getPosterQrcodeUrl() {
+      var url = 'https://' + domain + "/wp-content/plugins/wp-rest-api-for-app/qrcode/";
+      return url;
   }
-
-
 };

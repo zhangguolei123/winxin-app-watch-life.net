@@ -40,6 +40,8 @@
 
 17.专题订阅。
 
+18.文章海报（分享微信朋友圈的卡片）。
+
 # 开源地址
 
 https://github.com/iamxjb/winxin-app-watch-life.net
@@ -109,7 +111,7 @@ https://github.com/iamxjb/winxin-app-watch-life.net
 
 <a href="https://www.watch-life.net/wordpress/wordpress-weixin-2-6.html" target="_blank">12.WordPress版微信小程序2.6版发布</a>
 
-
+<a href="https://www.watch-life.net/wordpress/wordpress-weixin-3-0.html" target="_blank">13.WordPress版微信小程序3.0版发布</a>
 
 # 优秀WordPress版微信小程序推荐
 
@@ -120,7 +122,7 @@ https://github.com/iamxjb/winxin-app-watch-life.net
 
 # 讨论微信群：
 
-![wordpress版微信微信群2](https://www.watch-life.net/images/2018/01/qun2.png) 
+由于微信群超过100人，无法再扫描二维码加入。如果你想加入，请先加我的微信：iamxjb ，我拉你入群。
 
 
 
@@ -134,19 +136,29 @@ https://github.com/iamxjb/winxin-app-watch-life.net
 在此对上述提供开源及创意表示致谢。
 
 
-
 # 捐赠赞赏：请微信扫描以下二维码。感谢您对我的支持，您的支持是我前进的动力
 
-![weixinpay](https://www.watch-life.net/images/2017/07/zsm400.jpg) 
+![weixinpay](https://www.watch-life.net/images/2017/07/zsm400-github.jpg) 
 
 # WordPress微信小程序知识星球(小密圈)
 
 考虑到微信群里交流过于庞杂和碎片化，无法提供更专业的技术服务和知识分享，很多好的知识不能很好沉淀和积累，无法提供更好的分享价值，同时我也有意和兴趣相投人一起，创建一个wordpress和微信小程序的知识社区。基于此，我在“知识星球”里创建了一个“Wordpress微信小程序”的圈子，欢迎有兴趣的朋友和我一起创建一个有活力、创造力、有趣、有深度的知识社群。
 
-![zhishixingqiu](https://www.watch-life.net/images/2017/11/xiaomiquan300.jpg) 
+![zhishixingqiu](https://www.watch-life.net/images/2017/11/xiaomiquan300.jpg)
+ 
 
 
 # 更新历史：
+
+## 2018年2月15日
+
+1.增加文章海报（分享微信朋友圈的卡片）功能。
+
+2.兼容个人主体小程序的功能完善
+
+3.文章分享加题图。
+
+4.首页导航，提供三种方式的跳转
 
 ## 2017年12月15日
 
